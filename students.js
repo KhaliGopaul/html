@@ -6,10 +6,23 @@ const port = 4001
 app.use(cors( ))
 app.use(express.json())
 
-app.get("/",(req, res) => {
-res.send("hello world")
+let students = ["bob","samantha","grace","jim"]
+
+app.get("/",(req, res)=> {
+
+    let output = "<html><body><ul>"
+
+    // output = output + "hello there html>"
+   for(let i = 0; i < students.length;i++) {
+    output = output +
+'<li><input type="checkbox">' +s
+tudents[i] + '</li>'
+   }
+    output = output + "</ul></body><html>"
+
+res.send("output")
 })
 
 app.listen(port,()=> {
-    console.log("I was needed")
+    console.log("localhost:4001")
 })
