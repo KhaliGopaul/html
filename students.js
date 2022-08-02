@@ -8,15 +8,19 @@ app.use(express.json())
 
 let students = ["bob","samantha","grace","jim"]
 
-app.get("/",(req, res)=> {
+app.get("/movies/:movieTitle:director",(req, res)=> {
 
-    let output = "<html><body><ul>"
+    const movieTitle = req.params.director
+    console.log("director:",director)
+    console.log("Looking for movie ${movieTitle)")
+    const query = {}
+
+    let output = "<html><body>"
 
     // output = output + "hello there html>"
    for(let i = 0; i < students.length;i++) {
-    output = output +
-'<li><input type="checkbox">' +s
-tudents[i] + '</li>'
+    output = output + students[i]
+'<li><input type="checkbox">' +students[i] + '</li>'
    }
     output = output + "</ul></body><html>"
 
