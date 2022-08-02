@@ -1,5 +1,5 @@
 h1 {
-    background-color:green;
+    background-color:pink;
 }
 header > h1 {
 background-color:red
@@ -11,7 +11,7 @@ background-color:red
     background-color:blue
 }
 .whitetext {
-    color:white
+    color:pink
 }
 .custom-box {
     width:"320px";
@@ -19,3 +19,4 @@ background-color:red
     border: 5px solid grey;
     margin: 0;
 }
+
